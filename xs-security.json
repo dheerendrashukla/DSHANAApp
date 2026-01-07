@@ -1,0 +1,34 @@
+{
+  "xsappname": "dshanaapp1",
+  "tenant-mode": "dedicated",
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.Admin",
+      "description": "Admin"
+    }
+  ],
+  "attributes": [],
+  "role-templates": [
+    {
+      "name": "Admin",
+      "description": "generated",
+      "scope-references": [
+        "$XSAPPNAME.Admin"
+      ],
+      "attribute-references": []
+    }
+  ],
+  "oauth2-configuration": {
+    "credential-types": [
+      "binding_secret",
+      "x509"
+    ],
+    "token-validity": 3600,
+    "refresh-token-validity": 86400,
+    "redirect-uris": [
+      "http://localhost:4004/**",
+      "https://*.cfapps.eu10.hana.ondemand.com/**",
+      "https://*.applicationstudio.cloud.sap/**"
+    ]
+  }
+}
